@@ -1,0 +1,16 @@
+{
+  "name": "proyecto-node",
+  "version": "1.0.0",
+  "description": "Proyecto API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lair Gael",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1"
+  }
+}

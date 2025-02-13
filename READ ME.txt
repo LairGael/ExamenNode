@@ -1,0 +1,46 @@
+Instrucciones para correr el programa.
+
+1.- Iniciar el programa.
+    Ingresar 'npm start' en la terminal bash.
+
+2.- Ingresar un usuario.
+    En la terminal powershell ingresar la siguiente serie de comandos:
+
+    Invoke-WebRequest -Uri "http://localhost:3000/usuarios" `
+        -Method Post `
+        -Headers @{ "Content-Type"="application/json" } `
+        -Body '{"nombre":"Juan", "email":"juan@example.com", "edad":25}' `
+        -UseBasicParsing
+
+    Unicamente se adaptaran los datos de nombre, email y edad dependiendo de que es lo que se este buscando.
+
+3.- Obtener todos los usuarios.
+    En la terminal bash se ingresara la siguiente linea de comando:
+
+    curl -X GET http://localhost:3000/usuarios
+
+4.- Obtener usuario por ID.
+    En la terminal bash se ingresara la siguiente linea de comando:
+
+    curl.exe -X GET "http://localhost:3000/usuarios/1"
+
+    Solo modificando el parametro final de acuerdo al numero de la ID de la persona deseada.
+
+5.- Modificar usuario.
+    En la terminal powershell ingresar la siguiente serie de comandos:
+
+    Invoke-WebRequest -Uri "http://localhost:3000/usuarios/1" `
+        -Method Put `
+        -Headers @{ "Content-Type"="application/json" } `
+        -Body '{"nombre": "Juan Lopez", "email": "juanlopez@example.com", "edad": 30}' `
+        -UseBasicParsing
+
+    Unicamente se adaptaran los datos de nombre, email y edad dependiendo de que es lo que se este buscando.
+
+6.- Eliminar usuario.
+
+    En la terminal bash se ingresara la siguiente linea de comando:
+
+    curl.exe -X DELETE "http://localhost:3000/usuarios/1"
+
+    Solo modificando el parametro final de acuerdo al numero de la ID de la persona deseada.
